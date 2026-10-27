@@ -1,0 +1,16 @@
+{
+  "name": "Memory Quest Kids — Fun Card Matching Game",
+  "short_name": "MemoryQuest",
+  "description": "Fun, colorful 3D card-flipping memory match game for kids with 12, 16, and 20 card grids and 4 playful themes!",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1e1b4b",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFQ8M0VSFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFQ8M0VSFN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Memory Quest Kids — Fun Card Matching Game | Gamility</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Play Memory Quest Kids! A cheerful 3D card-flipping memory match game for children. Match cute animals, space explorers, sweets, and fruits across 12, 16, or 20 card grids!">
+  <meta name="keywords" content="memory quest kids, memory match game, card matching game, kids memory game, brain game, gamility games">
+  <meta name="author" content="Gamility">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahesh-yennam.github.io/Gamility/games/memory-quest-kids/index.html">
+
+  <!-- OpenGraph -->
+
+  <!-- Favicon & PWA -->
+    <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Memory Quest Kids — Fun Card Matching Game | Gamility">
+  <meta property="og:description" content="Play Memory Quest Kids! A cheerful 3D card-flipping memory match game for children. Match cute animals, space explorers, sweets, and fruits across 12, 16, or 20 card grids!">
+  <meta property="og:image" content="preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Memory Quest Kids — Fun Card Matching Game | Gamility">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Memory Quest Kids — Fun Card Matching Game | Gamility">
+  <meta name="twitter:description" content="Play Memory Quest Kids! A cheerful 3D card-flipping memory match game for children. Match cute animals, space explorers, sweets, and fruits across 12, 16, or 20 card grids!">
+  <meta name="twitter:image" content="preview.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOP GAMILITY RETURN RIBBON
+       ========================================================================= -->
+  <header class="top-nav-ribbon" role="banner">
+    <div class="ribbon-container">
+      <div class="ribbon-left">
+        <a href="https://mahesh-yennam.github.io/Gamility/" class="ribbon-brand" title="Gamility Home" aria-label="Gamility Home">
+          <svg width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 4L4 12V28L20 36L36 28V12L20 4Z" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M20 12L12 16V24L20 28L28 24V16L20 12Z" fill="#6366f1" fill-opacity="0.85"/>
+            <circle cx="20" cy="20" r="3" fill="#ffffff"/>
+          </svg>
+          <span class="brand-name">Gamility</span>
+          <span class="brand-badge">Memory</span>
+        </a>
+      </div>
+      <div class="ribbon-right">
+        <button type="button" class="btn-ribbon-icon" id="btnToggleAudio" aria-label="Toggle Sound" title="Toggle Sound">
+          <span id="audioIcon">🔊</span>
+        </button>
+        <a href="https://mahesh-yennam.github.io/Gamility/games.html" class="ribbon-back-btn" title="Back to All Games">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Games</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN ARCADE WRAPPER & PLAYROOM VIEWPORT
+       ========================================================================= -->
+  <main class="arcade-wrapper">
+    <div class="game-viewport" id="gameViewport">
+      
+      <!-- Top Playroom Toolbar: Card Count & Themes -->
+      <nav class="playroom-controls-bar">
+        <!-- Grid Size Switcher (12, 16, 20) -->
+        <div class="control-segment-pill" role="tablist" aria-label="Card Grid Size">
+          <button type="button" class="btn-pill-size" data-size="12" id="btnSize12" title="12 Cards (6 Pairs)">12 Cards</button>
+          <button type="button" class="btn-pill-size active" data-size="16" id="btnSize16" title="16 Cards (8 Pairs)">16 Cards</button>
+          <button type="button" class="btn-pill-size" data-size="20" id="btnSize20" title="20 Cards (10 Pairs)">20 Cards</button>
+        </div>
+
+        <!-- Theme Selector Dropdown / Pills -->
+        <div class="theme-pills-group" aria-label="Card Theme">
+          <button type="button" class="btn-theme-pill active" data-theme="animals" id="btnThemeAnimals" title="Safari Animals">🦁</button>
+          <button type="button" class="btn-theme-pill" data-theme="space" id="btnThemeSpace" title="Space Explorers">🚀</button>
+          <button type="button" class="btn-theme-pill" data-theme="sweets" id="btnThemeSweets" title="Sweet Treats">🍭</button>
+          <button type="button" class="btn-theme-pill" data-theme="fruits" id="btnThemeFruits" title="Juicy Fruits">🍎</button>
+        </div>
+      </nav>
+
+      <!-- Sub-Bar: Stats & Sneak Peek Hint -->
+      <div class="playroom-stats-bar">
+        <!-- Moves Counter -->
+        <div class="stat-group">
+          <span class="stat-lbl">MOVES</span>
+          <div class="score-display">
+            <span class="stat-val" id="hudMoves">0</span>
+            <span class="streak-badge" id="hudStreakBadge" style="display: none;">2x🔥</span>
+          </div>
+        </div>
+
+        <!-- Pairs Found Counter -->
+        <div class="stat-group pairs-group">
+          <span class="stat-lbl">PAIRS</span>
+          <span class="stat-val" id="hudPairs"><strong id="pairsFound">0</strong>/<span id="pairsTotal">8</span></span>
+        </div>
+
+        <!-- Best Moves Record -->
+        <div class="stat-group best-group">
+          <span class="stat-lbl">BEST</span>
+          <span class="stat-val best-val" id="hudBestMoves">--</span>
+        </div>
+
+        <!-- Sneak Peek Hint Button -->
+        <button type="button" class="btn-sneak-peek" id="btnSneakPeek" title="Sneak Peek: Reveal all cards for 1.5s!">
+          <span class="peek-icon">👀</span>
+          <span class="peek-text">Peek</span>
+        </button>
+      </div>
+
+      <!-- Playroom Background Wallpaper Atmosphere -->
+      <div class="playroom-ambient-bg" aria-hidden="true">
+        <div class="wallpaper-stars"></div>
+      </div>
+
+      <!-- Active 3D Card Playfield Area -->
+      <section class="card-playfield-area" id="cardPlayfieldArea">
+        <!-- Dynamic Cards Grid injected via game.js -->
+        <div class="cards-grid size-16" id="cardsGrid" aria-label="Memory Card Playfield">
+          <!-- Cards injected dynamically -->
+        </div>
+      </section>
+
+      <!-- Visual FX Overlay (Confetti & Particle Bursts) -->
+      <div class="fx-overlay" id="fxOverlay" aria-hidden="true"></div>
+
+      <!-- =========================================================================
+           OVERLAYS & MODALS
+           ========================================================================= -->
+
+      <!-- Welcome / Start Modal -->
+      <div class="game-overlay-modal start-overlay" id="startOverlay">
+        <div class="overlay-card">
+          <div class="overlay-icon-badge">
+            <span class="animated-icon">🎴</span>
+          </div>
+          <h1 class="overlay-title">MEMORY QUEST!</h1>
+          <p class="overlay-tagline">Test your memory! Flip two cards at a time to find matching pairs with cute animals, space rockets, sweets, and fruits!</p>
+
+          <div class="theme-selection-preview">
+            <div class="theme-card-btn active" data-theme="animals" id="modalThemeAnimals">
+              <span class="t-icon">🦁</span>
+              <span class="t-title">Animals</span>
+            </div>
+            <div class="theme-card-btn" data-theme="space" id="modalThemeSpace">
+              <span class="t-icon">🚀</span>
+              <span class="t-title">Space</span>
+            </div>
+            <div class="theme-card-btn" data-theme="sweets" id="modalThemeSweets">
+              <span class="t-icon">🍭</span>
+              <span class="t-title">Sweets</span>
+            </div>
+            <div class="theme-card-btn" data-theme="fruits" id="modalThemeFruits">
+              <span class="t-icon">🍎</span>
+              <span class="t-title">Fruits</span>
+            </div>
+          </div>
+
+          <div class="features-pill-row">
+            <span class="feature-tag">✨ 3D Card Flips</span>
+            <span class="feature-tag">⭐ 3-Star Rating</span>
+            <span class="feature-tag">👀 Sneak Peek</span>
+          </div>
+
+          <button type="button" class="btn-play-primary" id="btnStartGame">
+            <span>Play Memory Quest ▶</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Victory Celebration Modal -->
+      <div class="game-overlay-modal victory-overlay" id="victoryOverlay" style="display: none;">
+        <div class="overlay-card victory-card">
+          <div class="overlay-icon-badge victory-badge">
+            <span class="animated-icon">🏆</span>
+          </div>
+          <h2 class="overlay-title">SPLENDID MATCH!</h2>
+          <p class="overlay-tagline" id="victoryTagline">You found all matching pairs!</p>
+
+          <!-- Star Rating -->
+          <div class="stars-rating-container" id="victoryStarsContainer">
+            <span class="star-rating-icon active" id="vStar1">⭐</span>
+            <span class="star-rating-icon active" id="vStar2">⭐</span>
+            <span class="star-rating-icon active" id="vStar3">⭐</span>
+          </div>
+
+          <div class="gameover-score-banner">
+            <div class="score-col">
+              <span class="col-lbl">MOVES USED</span>
+              <span class="col-val" id="victoryMoves">14</span>
+            </div>
+            <div class="score-divider"></div>
+            <div class="score-col">
+              <span class="col-lbl">BEST MOVES</span>
+              <span class="col-val highlight-gold" id="victoryBestMoves">12</span>
+            </div>
+          </div>
+
+          <div class="gameover-stats-grid">
+            <div class="stat-card">
+              <span class="card-icon">🎴</span>
+              <span class="card-val" id="victoryCardCount">16</span>
+              <span class="card-label">Cards</span>
+            </div>
+            <div class="stat-card">
+              <span class="card-icon">🔥</span>
+              <span class="card-val" id="victoryMaxStreak">3</span>
+              <span class="card-label">Best Streak</span>
+            </div>
+            <div class="stat-card">
+              <span class="card-icon">⏱️</span>
+              <span class="card-val" id="victoryTimeTaken">0:28</span>
+              <span class="card-label">Time</span>
+            </div>
+          </div>
+
+          <div class="overlay-actions">
+            <button type="button" class="btn-play-primary" id="btnPlayAgain">
+              <span>Play Again 🔄</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="game.js"></script>
+</body>
+</html>
